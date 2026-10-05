@@ -1,4 +1,3 @@
-streamlit run app/streamlit_app.py# AI Fragrance Intelligence
 
 **Prédire le profil olfactif d'une molécule à partir de sa structure chimique, et expliquer pourquoi.**
 
