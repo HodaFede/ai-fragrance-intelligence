@@ -1,0 +1,17 @@
+# Fichiers à ne pas versionner (un commentaire par ligne : git n'accepte pas les commentaires en fin de ligne).
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+# Données téléchargées automatiquement depuis GitHub.
+data/
+# Base locale des expériences MLflow.
+mlflow.db
+mlartifacts/
+
+# Raccourcis Streamlit propres à la machine locale.
+.agents/
+.claude/
+
+# Fichiers générés automatiquement par « pip install -e . ».
+*.egg-info/

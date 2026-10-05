@@ -1,0 +1,177 @@
+{
+  "model": "xgboost",
+  "policy": "drop",
+  "best_overall_on_validation": "xgboost / drop",
+  "labels": [
+    "animalic&ambery",
+    "sweety&gourmand",
+    "floral",
+    "fruity&vegetable",
+    "pungent&disagreeable",
+    "green&herbal",
+    "nutty",
+    "woody&mossy",
+    "resinous&balsamic",
+    "cooked",
+    "odorless",
+    "spice"
+  ],
+  "thresholds": {
+    "animalic&ambery": 0.38000000000000006,
+    "sweety&gourmand": 0.38000000000000006,
+    "floral": 0.5000000000000001,
+    "fruity&vegetable": 0.42000000000000004,
+    "pungent&disagreeable": 0.6300000000000001,
+    "green&herbal": 0.33,
+    "nutty": 0.37000000000000005,
+    "woody&mossy": 0.4100000000000001,
+    "resinous&balsamic": 0.19,
+    "cooked": 0.36000000000000004,
+    "odorless": 0.08000000000000002,
+    "spice": 0.37000000000000005
+  },
+  "test_metrics": {
+    "macro_f1": 0.46829758905017477,
+    "macro_precision": 0.44794194636942536,
+    "macro_recall": 0.5167194552193636,
+    "macro_pr_auc": 0.4509279453102339,
+    "macro_auroc": 0.8207700156728929,
+    "micro_f1": 0.5495151337055539,
+    "macro_f1_at_0.5": 0.44666837104968216,
+    "per_label": {
+      "animalic&ambery": {
+        "f1": 0.5299145299145299,
+        "precision": 0.5636363636363636,
+        "recall": 0.5,
+        "pr_auc": 0.4871056908584803,
+        "auroc": 0.8356124357176251,
+        "threshold": 0.38000000000000006,
+        "support": 62
+      },
+      "sweety&gourmand": {
+        "f1": 0.2943396226415094,
+        "precision": 0.24375,
+        "recall": 0.37142857142857144,
+        "pr_auc": 0.28720914022195054,
+        "auroc": 0.6974218986957841,
+        "threshold": 0.38000000000000006,
+        "support": 105
+      },
+      "floral": {
+        "f1": 0.6397984886649875,
+        "precision": 0.5669642857142857,
+        "recall": 0.7341040462427746,
+        "pr_auc": 0.6173299334150689,
+        "auroc": 0.871405422400658,
+        "threshold": 0.5000000000000001,
+        "support": 173
+      },
+      "fruity&vegetable": {
+        "f1": 0.5697674418604651,
+        "precision": 0.5025641025641026,
+        "recall": 0.6577181208053692,
+        "pr_auc": 0.5870063030751151,
+        "auroc": 0.8575931309947559,
+        "threshold": 0.42000000000000004,
+        "support": 149
+      },
+      "pungent&disagreeable": {
+        "f1": 0.3930131004366812,
+        "precision": 0.45918367346938777,
+        "recall": 0.3435114503816794,
+        "pr_auc": 0.3939697921614566,
+        "auroc": 0.7976646652385119,
+        "threshold": 0.6300000000000001,
+        "support": 131
+      },
+      "green&herbal": {
+        "f1": 0.6515151515151515,
+        "precision": 0.5361596009975063,
+        "recall": 0.8301158301158301,
+        "pr_auc": 0.6572397366661145,
+        "auroc": 0.8449051269970446,
+        "threshold": 0.33,
+        "support": 259
+      },
+      "nutty": {
+        "f1": 0.41509433962264153,
+        "precision": 0.55,
+        "recall": 0.3333333333333333,
+        "pr_auc": 0.3846986778740753,
+        "auroc": 0.8170856758954775,
+        "threshold": 0.37000000000000005,
+        "support": 33
+      },
+      "woody&mossy": {
+        "f1": 0.45733788395904434,
+        "precision": 0.4161490683229814,
+        "recall": 0.5075757575757576,
+        "pr_auc": 0.43608320929111627,
+        "auroc": 0.8004017750059967,
+        "threshold": 0.4100000000000001,
+        "support": 132
+      },
+      "resinous&balsamic": {
+        "f1": 0.3111111111111111,
+        "precision": 0.2545454545454545,
+        "recall": 0.4,
+        "pr_auc": 0.2979303089056657,
+        "auroc": 0.8147386759581882,
+        "threshold": 0.19,
+        "support": 70
+      },
+      "cooked": {
+        "f1": 0.3389830508474576,
+        "precision": 0.2702702702702703,
+        "recall": 0.45454545454545453,
+        "pr_auc": 0.2287643230588987,
+        "auroc": 0.8660452450775031,
+        "threshold": 0.36000000000000004,
+        "support": 22
+      },
+      "odorless": {
+        "f1": 0.7658227848101266,
+        "precision": 0.8120805369127517,
+        "recall": 0.7245508982035929,
+        "pr_auc": 0.8133809547413768,
+        "auroc": 0.8702235816137509,
+        "threshold": 0.08000000000000002,
+        "support": 334
+      },
+      "spice": {
+        "f1": 0.25287356321839083,
+        "precision": 0.2,
+        "recall": 0.34375,
+        "pr_auc": 0.22041727345348783,
+        "auroc": 0.7761425544794188,
+        "threshold": 0.37000000000000005,
+        "support": 64
+      }
+    }
+  },
+  "paper_baseline_macro_f1": 0.42,
+  "data_source": "OdorNet, Yang et al., Scientific Data (2026), doi:10.1038/s41597-026-08429-z",
+  "data_manifest": {
+    "train": {
+      "url": "https://raw.githubusercontent.com/NKU-DOIE/OdorNet/main/data/processed/dataset_train_aligned.csv",
+      "bytes": 395066,
+      "sha256": "9cd50ca84a2f48b70e651157b271d305e1c85932d3b5d91f30f2dc96b7aff2df"
+    },
+    "val": {
+      "url": "https://raw.githubusercontent.com/NKU-DOIE/OdorNet/main/data/processed/dataset_val_aligned.csv",
+      "bytes": 133826,
+      "sha256": "4ccb06de41e443c473f70ca9225ec4c5edda305f0d6740dc15b314d31dcc3e4d"
+    },
+    "test": {
+      "url": "https://raw.githubusercontent.com/NKU-DOIE/OdorNet/main/data/processed/dataset_test_aligned.csv",
+      "bytes": 72382,
+      "sha256": "49661f0126916207c2178772d961739b51e6db1e4d268c3b6d720a59811c0f1a"
+    }
+  },
+  "limitations": [
+    "Les probabilités affichées servent à comparer les familles entre elles ; ce ne sont pas des certitudes.",
+    "Les familles olfactives viennent de descriptions humaines, par nature subjectives.",
+    "Une molécule pour laquelle aucune famille n'est retenue n'est pas forcément inodore.",
+    "C'est un outil d'exploration : il ne remplace ni un panel d'experts, ni une évaluation de sécurité."
+  ]
+}

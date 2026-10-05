@@ -1,0 +1,11 @@
+# Dépendances figées (versions testées) : garantit que le projet se réinstalle à l'identique.
+numpy==2.4.4
+pandas==3.0.2
+scikit-learn==1.8.0
+xgboost==3.4.1
+rdkit==2026.3.6
+shap==0.52.0
+joblib==1.5.3
+fastapi==0.142.2
+uvicorn==0.54.0
+streamlit==1.65.0

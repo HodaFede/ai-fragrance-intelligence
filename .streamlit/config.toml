@@ -1,0 +1,7 @@
+# Thème visuel de l'application Streamlit : rose poudré et prune.
+[theme]
+base = "light"                          # Fond clair.
+primaryColor = "#A0446B"                # Prune : boutons et éléments actifs.
+backgroundColor = "#FBF7F8"             # Fond rose très pâle.
+secondaryBackgroundColor = "#F1E6EB"    # Fond des champs de saisie.
+textColor = "#2E1F2B"                   # Texte prune très foncé.

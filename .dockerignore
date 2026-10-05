@@ -1,0 +1,8 @@
+# Fichiers exclus de l'image Docker (allège la construction).
+.git
+.venv
+data
+mlflow.db
+mlartifacts
+tests
+__pycache__

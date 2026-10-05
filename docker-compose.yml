@@ -1,0 +1,15 @@
+# Lance l'API et l'application ensemble : docker compose up --build
+services:
+  api:                                         # Service 1 : l'API REST.
+    build: .                                   # Construit l'image à partir du Dockerfile.
+    command: uvicorn api.main:app --host 0.0.0.0 --port 8000   # Remplace la commande par défaut.
+    ports: ["8000:8000"]                       # Accessible sur http://localhost:8000/docs.
+    healthcheck:                               # Docker vérifie régulièrement que l'API répond.
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s                            # Vérification toutes les 30 secondes.
+  app:                                         # Service 2 : l'interface Streamlit.
+    build: .                                   # Même image.
+    environment:
+      API_URL: http://api:8000                 # L'app interroge l'API par le réseau interne de Docker.
+    ports: ["8501:8501"]                       # Accessible sur http://localhost:8501.
+    depends_on: [api]                          # Démarre après l'API.

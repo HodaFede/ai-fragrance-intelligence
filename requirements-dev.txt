@@ -1,0 +1,10 @@
+# Outils d'entraînement et de développement (inutiles pour faire tourner l'application déployée).
+-r requirements.txt
+jax==0.11.2
+jaxlib==0.11.2
+optax==0.2.8
+mlflow==3.16.1
+pytest==9.1.1
+ipykernel
+matplotlib
+httpx

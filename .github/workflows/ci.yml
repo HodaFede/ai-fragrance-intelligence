@@ -1,0 +1,13 @@
+# Intégration continue : à chaque push, GitHub installe le projet et lance les tests.
+name: CI
+on: [push, pull_request]                       # Déclencheurs.
+jobs:
+  tests:
+    runs-on: ubuntu-latest                     # Machine virtuelle Linux fournie par GitHub.
+    steps:
+      - uses: actions/checkout@v4              # Récupère le code du dépôt.
+      - uses: actions/setup-python@v5          # Installe Python.
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements-dev.txt && pip install -e .   # Installe les dépendances.
+      - run: pytest -q                         # Lance les tests ; un échec bloque le merge.

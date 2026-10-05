@@ -1,0 +1,49 @@
+{
+  "macro_f1": 0.4683,
+  "macro_f1_ci95": [
+    0.4381,
+    0.4954
+  ],
+  "share_above_paper": 0.9995,
+  "xgb_minus_rf_ci95": [
+    -0.0105,
+    0.0193
+  ],
+  "by_similarity": [
+    {
+      "Similarité": "faible (< 0,4)",
+      "Molécules": 225,
+      "Macro-F1": 0.42,
+      "Intervalle 95 %": "0.33 – 0.48"
+    },
+    {
+      "Similarité": "moyenne (0,4 à 0,6)",
+      "Molécules": 328,
+      "Macro-F1": 0.443,
+      "Intervalle 95 %": "0.40 – 0.48"
+    },
+    {
+      "Similarité": "élevée (≥ 0,6)",
+      "Molécules": 337,
+      "Macro-F1": 0.48,
+      "Intervalle 95 %": "0.42 – 0.53"
+    }
+  ],
+  "by_size": [
+    {
+      "Taille (atomes lourds)": "moins de 10",
+      "Molécules": 90,
+      "Macro-F1": 0.29
+    },
+    {
+      "Taille (atomes lourds)": "10 à 13",
+      "Molécules": 268,
+      "Macro-F1": 0.468
+    },
+    {
+      "Taille (atomes lourds)": "14 et plus",
+      "Molécules": 532,
+      "Macro-F1": 0.393
+    }
+  ]
+}

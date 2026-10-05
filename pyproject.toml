@@ -1,0 +1,16 @@
+# Déclare le dossier src/ comme un package Python installable avec « pip install -e . ».
+[build-system]
+requires = ["setuptools>=68"]                 # Outil qui construit le package.
+build-backend = "setuptools.build_meta"       # Point d'entrée de cet outil.
+
+[project]
+name = "fragrance-ai"                         # Nom du package.
+version = "1.0.0"                             # Version du projet.
+description = "Prédiction explicable du profil olfactif de molécules"  # Résumé.
+requires-python = ">=3.11"                    # Version minimale de Python.
+
+[tool.setuptools.packages.find]
+where = ["src"]                               # Le code du package se trouve dans src/.
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]                         # Dossier où pytest cherche les tests.
