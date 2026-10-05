@@ -1,5 +1,7 @@
 # AI Fragrance Intelligence
 
+**[▶ Essayer l'application en ligne](https://ai-fragrance-intelligence.streamlit.app)** · [Analyse détaillée](notebooks/analyse.ipynb) · [Article OdorNet](https://www.nature.com/articles/s41597-026-08429-z)
+
 **Prédire le profil olfactif d'une molécule à partir de sa structure chimique, et expliquer pourquoi.**
 
 On choisit une molécule célèbre de la parfumerie (vanilline, hédione, ambroxide…), on tire une molécule que le modèle n'a jamais vue, ou on saisit sa propre structure au format SMILES. L'application affiche sa carte d'identité (formule brute, masse molaire, rôle en parfumerie), puis le modèle estime la probabilité de chacune des 12 familles olfactives (floral, boisé, épicé, gourmand…) et montre les sous-structures chimiques qui ont pesé dans sa décision. Pour la vanilline, par exemple, il retient « sucré / gourmand » et justifie ce choix par la fonction aldéhyde aromatique et le motif gaïacol (méthoxyphénol) : c'est le raisonnement qu'aurait un chimiste formulateur.
