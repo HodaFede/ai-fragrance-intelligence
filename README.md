@@ -1,3 +1,4 @@
+# AI Fragrance Intelligence
 
 **Prédire le profil olfactif d'une molécule à partir de sa structure chimique, et expliquer pourquoi.**
 
@@ -59,14 +60,14 @@ Avant tout entraînement, le pipeline vérifie le schéma de chaque fichier (col
 
 ## Fiabilité de chaque prédiction
 
-Les scores ci-dessus décrivent le modèle dans son ensemble. Pour chaque molécule analysée, l'application indique en plus si elle ressemble à ce que le modèle a appris : elle cherche la molécule d'entraînement la plus proche (similarité de Tanimoto sur les fingerprints de Morgan) et affiche sa structure et son profil olfactif connu. Une molécule déjà présente à l'entraînement est signalée comme telle ; une molécule très éloignée de toutes les molécules connues est signalée comme une extrapolation peu fiable. C'est ce qu'on appelle le domaine d'applicabilité du modèle. Les seuils utilisés (0,6 et 0,4) sont des repères usuels en chimie computationnelle, pas des garanties.
+Les scores ci-dessus décrivent le modèle dans son ensemble. Pour chaque molécule analysée, l'application indique en plus si elle ressemble à ce que le modèle a appris : elle cherche la molécule d'entraînement la plus proche (similarité de Tanimoto sur les fingerprints de Morgan) et affiche sa structure et son profil olfactif connu. Une molécule déjà présente à l'entraînement est signalée comme telle ; une molécule très éloignée des molécules connues est signalée comme à interpréter avec prudence. L'analyse montre que l'effet de la similarité sur le score reste modéré. C'est ce qu'on appelle le domaine d'applicabilité du modèle. Les seuils utilisés (0,6 et 0,4) sont des repères usuels en chimie computationnelle, pas des garanties.
 
 ## Installation et utilisation
 
 Il faut Python 3.11 ou plus récent.
 
 ```bash
-git clone <url-de-ton-depot> && cd fragrance-ai
+git clone https://github.com/HodaFede/ai-fragrance-intelligence.git && cd ai-fragrance-intelligence
 python -m venv .venv && source .venv/bin/activate   # Windows : .venv\Scripts\activate
 make install          # ou : pip install -r requirements-dev.txt && pip install -e .
 ```
@@ -86,7 +87,7 @@ Pour tout ré-entraîner (environ 20 minutes sur un seul cœur) : `make train`. 
 
 **Docker.** `docker compose up --build` lance l'API (port 8000) et l'application (port 8501). L'application interroge alors l'API par le réseau interne de Docker.
 
-**Streamlit Community Cloud (gratuit).** Pousse le dépôt sur GitHub, puis sur share.streamlit.io, choisis le dépôt et le fichier `app/streamlit_app.py`. Sans variable `API_URL`, l'application charge le modèle elle-même.
+**Streamlit Community Cloud (gratuit).** Sur share.streamlit.io, choisis ce dépôt et le fichier `app/streamlit_app.py`. Sans variable `API_URL`, l'application charge le modèle elle-même.
 
 **Hugging Face Spaces.** Crée un Space de type Docker et pousse le dépôt : le `Dockerfile` est utilisé tel quel.
 
